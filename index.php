@@ -21,8 +21,8 @@ newPost('url');
                 <header>
                     <img class="logo" alt="logo du site" src="public/img/logo.png" />
                 </header>
-                <h1>url est trop longue ? raccourcissez-là ...</h1>
-                <h2>plus court que les autres se serait meilleur...</h2>
+                <h1 class="txt-animation"></h1>
+                <h2>Url plus court que les autres, vous serez meilleur...</h2>
                 <form action="index.php" method="post">
                     <input type="url" name ="url" placeholder="url à raccourcir..." />
                     <input type="submit" value="soumettre" />
@@ -36,7 +36,7 @@ newPost('url');
             <?php elseif(isset($_GET['short'])): ?>
                 <div class="center">
                 <div class="error">
-                        <b>URL RACCOURCIE :</b> http://localhost/?q=<?= htmlspecialchars($_GET['short']) ?>
+                        <b>URL RACCOURCIE :</b> <a class="link" href="http://localhost/raccourcirUrl/index.php?q=<?= htmlspecialchars($_GET['short']) ?>" target= _blank><?= htmlspecialchars($_GET['short']) ?></a>
                     </div>
                 </div>
             <?php endif ?>        
@@ -55,6 +55,9 @@ newPost('url');
             <img src="public/img/logo2.png" alt="logo du site" class="logo2">
             <p class="text">2020 © DOM</p>
             <a href="#" class="link">Contact</a>   <a href="#" class="link">À propos</a>
-        </footer>        
+        </footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+        <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+        <script src="public/js/app.js"></script>         
     </body>
 </html>
