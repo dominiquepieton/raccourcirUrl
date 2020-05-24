@@ -1,3 +1,10 @@
+<?php
+require 'functions.php';
+//Verification
+verif('q');
+//nouveau envoi
+newPost('url');
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -20,6 +27,19 @@
                     <input type="url" name ="url" placeholder="url à raccourcir..." />
                     <input type="submit" value="soumettre" />
                 </form>
+            <?php if(isset($_GET['error']) && isset($_GET['message'])): ?>
+                <div class="center">
+                    <div class="error">
+                        <b><?= htmlspecialchars($_GET['message']) ?></b>
+                    </div>
+                </div>   
+            <?php elseif(isset($_GET['short'])): ?>
+                <div class="center">
+                <div class="error">
+                        <b>URL RACCOURCIE :</b> http://localhost/?q=<?= htmlspecialchars($_GET['short']) ?>
+                    </div>
+                </div>
+            <?php endif ?>        
             </div>
         </section>
         <section class="brands">
