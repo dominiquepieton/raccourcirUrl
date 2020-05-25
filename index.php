@@ -36,7 +36,8 @@ newPost('url');
             <?php elseif(isset($_GET['short'])): ?>
                 <div class="center">
                 <div class="error">
-                        <b>URL RACCOURCIE :</b> <a class="link" href="http://localhost/raccourcirUrl/index.php?q=<?= htmlspecialchars($_GET['short']) ?>" target= _blank><?= htmlspecialchars($_GET['short']) ?></a>
+                        <b>URL RACCOURCIE :</b> <a class="link" href="http://localhost/raccourcirUrl/index.php?q=<?= htmlspecialchars($_GET['short']) ?>" target= _blank><?= htmlspecialchars($_GET['short']) ?></a><br>
+                        <p>Votre url sera : http://localhost/raccourcirUrl/index.php?q=<?= htmlspecialchars($_GET['short']) ?>.</p>
                     </div>
                 </div>
             <?php endif ?>        

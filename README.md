@@ -42,4 +42,4 @@
                 createUrl($url, $shorcut);
             }
         }
-            
+
